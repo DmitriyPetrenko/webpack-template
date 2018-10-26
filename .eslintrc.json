@@ -1,0 +1,117 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true,
+        "jest": true
+    },
+    "settings": {
+        "react": {
+            "version": "^16.5.2"
+        }
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": ["react", "import"],
+    "parser": "babel-eslint",
+    "rules": {
+        "prettier/prettier": "error",
+        "array-callback-return": "error",
+        "arrow-body-style": "error",
+        "camelcase": [
+            "error",
+            {
+                "ignoreDestructuring": true
+            }
+        ],
+        "dot-notation": "error",
+        "eqeqeq": "error",
+        "func-style": [
+            "error",
+            "declaration",
+            {
+                "allowArrowFunctions": true
+            }
+        ],
+        "id-length": "error",
+        "import/default": "error",
+        "import/first": "error",
+        "import/named": "error",
+        "import/newline-after-import": "error",
+        "import/no-amd": "error",
+        "import/no-commonjs": "error",
+        "import/no-deprecated": "error",
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "optionalDependencies": false
+            }
+        ],
+        "import/no-named-as-default": "error",
+        "import/no-mutable-exports": "error",
+        "import/no-unresolved": "error",
+        "import/order": [
+            "error",
+            {
+                "newlines-between": "always"
+            }
+        ],
+        "linebreak-style": ["error", "windows"],
+        "new-cap": "error",
+        "no-array-constructor": "error",
+        "no-case-declarations": "error",
+        "no-console": "warn",
+        "no-cond-assign": "error",
+        "no-confusing-arrow": "error",
+        "no-debugger": "warn",
+        "no-dupe-class-members": "error",
+        "no-duplicate-imports": "error",
+        "no-else-return": "error",
+        "no-eval": "error",
+        "no-iterator": "error",
+        "no-loop-func": "error",
+        "no-multi-assign": "error",
+        "no-nested-ternary": "error",
+        "no-new-func": "error",
+        "no-new-object": "error",
+        "no-new-wrappers": "error",
+        "no-param-reassign": "error",
+        "no-plusplus": "error",
+        "no-prototype-builtins": "error",
+        "no-restricted-globals": "error",
+        "no-undef": "error",
+        "no-underscore-dangle": "error",
+        "no-unneeded-ternary": "error",
+        "no-unused-vars": "error",
+        "no-useless-constructor": "error",
+        "no-useless-escape": "error",
+        "no-var": "error",
+        "object-shorthand": "error",
+        "one-var": ["error", "never"],
+        "prefer-arrow-callback": "error",
+        "prefer-const": "error",
+        "prefer-destructuring": "error",
+        "prefer-rest-params": "error",
+        "prefer-spread": "error",
+        "prefer-template": "error",
+        "react/jsx-key": "error",
+        "react/no-children-prop": "error",
+        "react/no-danger-with-children": "error",
+        "react/no-deprecated": "error",
+        "react/no-find-dom-node": "error",
+        "react/no-is-mounted": "error",
+        "react/jsx-no-duplicate-props": "error",
+        "react/jsx-no-undef": "error",
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "react/react-in-jsx-scope": "error",
+        "react/require-render-return": "error",
+        "spaced-comment": "error"
+    }
+}
