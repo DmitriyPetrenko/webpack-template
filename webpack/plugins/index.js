@@ -12,7 +12,7 @@ export const cleanPlugin = (path) =>
 export const htmlPlugin = new HtmlWebpackPlugin({
     inject: false,
     template: HtmlWebpackTemplate,
-    title: 'User authentication',
+    title: 'Hello World',
     appMountIds: ['root'],
     mobile: true,
     lang: 'en-US'

@@ -4,11 +4,13 @@
   "description": "",
   "private": true,
   "scripts": {
+    "start": "nodemon",
     "build:dev": "webpack --config \"./webpack/webpack.config.babel.js\" --env.NODE_ENV=development",
     "build:prod": "webpack --config \"./webpack/webpack.config.babel.js\" --env.NODE_ENV=production",
-    "eslint": "eslint --color ./client/",
-    "eslint:fix": "eslint --color --fix ./client/",
-    "eslint:check": "eslint --print-config . | eslint-config-prettier-check",
+    "lint:js": "eslint --color ./client/",
+    "lint:js-fix": "eslint --color --fix ./client/",
+    "lint:js-check": "eslint --print-config . | eslint-config-prettier-check",
+    "lint:css":"stylelint --color \"./client/**/*.js\"",
     "test": "jest --color --watchAll"
   },
   "husky": {
@@ -17,8 +19,9 @@
     }
   },
   "lint-staged": {
-    "*.{js, json}": [
+    "*.{js, jsx, json}": [
       "eslint --color --max-warnings=0",
+      "stylelint --color",
       "prettier --write",
       "git add"
     ]
@@ -33,6 +36,16 @@
     "url": "https://github.com/DmitriyPetrenko/webpack-template/issues"
   },
   "homepage": "https://github.com/DmitriyPetrenko/webpack-template#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.0.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
@@ -48,6 +61,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
+    "babel-plugin-styled-components": "^1.8.0",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^0.1.19",
     "concurrently": "^4.0.1",
@@ -76,6 +90,10 @@
     "redux-logger": "^3.0.6",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "stylelint": "^9.7.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.5.0",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",

@@ -14,9 +14,6 @@ export const development = (path, plugins) =>
             filename: 'js/[name].bundle.js',
             path: path.output
         },
-        module: {
-            rules: []
-        },
         devServer: {
             hot: true,
             historyApiFallback: true,
